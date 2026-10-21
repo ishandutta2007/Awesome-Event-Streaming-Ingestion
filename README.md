@@ -4,7 +4,7 @@
 
 <p align="center">
   <a href="https://github.com/ishandutta2007/Awesome-Awesome-Awesome"><img src="https://img.shields.io/badge/Awesome-%E2%9C%94-blueviolet?style=flat-square&logo=github" alt="Awesome"/></a><a href="https://discord.gg/jc4xtF58Ve"><img src="https://img.shields.io/badge/Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white" alt="Discord" /></a>
-  <a href="https://github.com/ishandutta2007/Awesome-Event-Streaming-Ingestion/stargazers"><img src="https://img.shields.io/github/stars/ishandutta2007/Awesome-Event-Streaming-Ingestion?style=flat-square&logo=github&color=gold" alt="GitHub Stars" /></a>
+  <a href="https://github.com/ishandutta2007/Awesome-Event-Streaming-Ingestion/stargazers"><img src="https://img.shields.io/github/stars/ishandutta2007/Awesome-Event-Streaming-Ingestion?style=flat-square&logo=github&color=gold" alt="GitHub_Stars" /></a>
   <a href="https://github.com/ishandutta2007/Awesome-Event-Streaming-Ingestion/network/members"><img src="https://img.shields.io/github/forks/ishandutta2007/Awesome-Event-Streaming-Ingestion?style=flat-square&logo=github&color=blue" alt="GitHub Forks" /></a>
   <a href="https://github.com/ishandutta2007/Awesome-Event-Streaming-Ingestion/blob/main/LICENSE"><img src="https://img.shields.io/badge/License-MIT-green.svg?style=flat-square" alt="License: MIT" /></a>
   <a href="https://github.com/ishandutta2007/Awesome-Event-Streaming-Ingestion/pulls"><img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square" alt="PRs Welcome" /></a>
@@ -63,77 +63,77 @@ A comprehensive comparison of leading managed and serverless event streaming ser
 
 ## 🐙 Open-Source GitHub Projects
 
-Self-hosted, transparent, and protocol-flexible event streaming engines, brokers, and ingestion pipelines. Sorted in descending order by **GitHub Star Count**.
+Self-hosted, transparent, and protocol-flexible event streaming engines, brokers, and ingestion pipelines. Sorted in descending order by **GitHub Stars_Count**.
 
-1. **[Apache Kafka](https://github.com/apache/kafka)** [![GitHub stars](https://img.shields.io/github/stars/apache/kafka?style=social&color=white)](https://github.com/apache/kafka/stargazers)  
+1. **[Apache Kafka](https://github.com/apache/kafka)** [![GitHub_Stars](https://img.shields.io/github/stars/apache/kafka?style=social&color=white)](https://github.com/apache/kafka/stargazers)  
    The industry-standard distributed event streaming platform. Provides ultra-high-throughput, fault-tolerant, durable log storage with strong ordering semantics. Modern KRaft mode eliminates ZooKeeper dependencies.  
    *Best for:* Mission-critical enterprise streaming backbones, CDC pipelines, and large-scale data lake ingestion.
 
-2. **[Apache Flink](https://github.com/apache/flink)** [![GitHub stars](https://img.shields.io/github/stars/apache/flink?style=social&color=white)](https://github.com/apache/flink/stargazers)  
+2. **[Apache Flink](https://github.com/apache/flink)** [![GitHub_Stars](https://img.shields.io/github/stars/apache/flink?style=social&color=white)](https://github.com/apache/flink/stargazers)  
    Stateful stream processing framework over unbounded and bounded data streams. Features low event-latency, exactly-once processing guarantees, and robust state and checkpoint management.  
    *Best for:* Complex real-time event analytics, streaming CEP (Complex Event Processing), and dynamic sliding-window calculations.
 
-3. **[Vector](https://github.com/vectordotdev/vector)** [![GitHub stars](https://img.shields.io/github/stars/vectordotdev/vector?style=social&color=white)](https://github.com/vectordotdev/vector/stargazers)  
+3. **[Vector](https://github.com/vectordotdev/vector)** [![GitHub_Stars](https://img.shields.io/github/stars/vectordotdev/vector?style=social&color=white)](https://github.com/vectordotdev/vector/stargazers)  
    High-performance observability and event data pipeline written in Rust. Ingests, transforms, and routes logs, metrics, and event streams with memory safety and minimal resource footprint.  
    *Best for:* High-throughput log and telemetry ingestion, routing, and schema transformation before downstream brokers.
 
-4. **[Apache RocketMQ](https://github.com/apache/rocketmq)** [![GitHub stars](https://img.shields.io/github/stars/apache/rocketmq?style=social&color=white)](https://github.com/apache/rocketmq/stargazers)  
+4. **[Apache RocketMQ](https://github.com/apache/rocketmq)** [![GitHub_Stars](https://img.shields.io/github/stars/apache/rocketmq?style=social&color=white)](https://github.com/apache/rocketmq/stargazers)  
    Cloud-native distributed messaging and streaming platform designed for low-latency, massive message accumulation, and financial-grade reliability. Developed originally by Alibaba.  
    *Best for:* E-commerce transaction processing, ordered message delivery, and large-scale enterprise messaging backplanes.
 
-5. **[NATS Server](https://github.com/nats-io/nats-server)** [![GitHub stars](https://img.shields.io/github/stars/nats-io/nats-server?style=social&color=white)](https://github.com/nats-io/nats-server/stargazers)  
+5. **[NATS Server](https://github.com/nats-io/nats-server)** [![GitHub_Stars](https://img.shields.io/github/stars/nats-io/nats-server?style=social&color=white)](https://github.com/nats-io/nats-server/stargazers)  
    Connective technology for adaptive edge, IoT, and cloud distributed systems written in Go. Features JetStream for persistence, key-value storage, and object streaming at millions of msgs/sec.  
    *Best for:* Microservices pub/sub, edge computing, dynamic multi-cloud meshes, and lightweight persistent event logs.
 
-6. **[EMQX](https://github.com/emqx/emqx)** [![GitHub stars](https://img.shields.io/github/stars/emqx/emqx?style=social&color=white)](https://github.com/emqx/emqx/stargazers)  
+6. **[EMQX](https://github.com/emqx/emqx)** [![GitHub_Stars](https://img.shields.io/github/stars/emqx/emqx?style=social&color=white)](https://github.com/emqx/emqx/stargazers)  
    World's most scalable open-source MQTT message broker for IoT and industrial automation. Written in Erlang/OTP, capable of handling 100M+ concurrent MQTT connections in a single cluster.  
    *Best for:* Massive IoT fleet telemetry ingestion, smart cities, and vehicle-to-everything (V2X) streaming.
 
-7. **[Apache Pulsar](https://github.com/apache/pulsar)** [![GitHub stars](https://img.shields.io/github/stars/apache/pulsar?style=social&color=white)](https://github.com/apache/pulsar/stargazers)  
+7. **[Apache Pulsar](https://github.com/apache/pulsar)** [![GitHub_Stars](https://img.shields.io/github/stars/apache/pulsar?style=social&color=white)](https://github.com/apache/pulsar/stargazers)  
    Distributed pub-sub messaging and streaming platform separating computation from storage (Apache BookKeeper). Natively supports multi-tenancy, tiered cold storage, and geo-replication.  
    *Best for:* Multi-tenant SaaS architectures, geo-distributed streaming clusters, and long-term event retention.
 
-8. **[RabbitMQ](https://github.com/rabbitmq/rabbitmq-server)** [![GitHub stars](https://img.shields.io/github/stars/rabbitmq/rabbitmq-server?style=social&color=white)](https://github.com/rabbitmq/rabbitmq-server/stargazers)  
+8. **[RabbitMQ](https://github.com/rabbitmq/rabbitmq-server)** [![GitHub_Stars](https://img.shields.io/github/stars/rabbitmq/rabbitmq-server?style=social&color=white)](https://github.com/rabbitmq/rabbitmq-server/stargazers)  
    Extremely mature, battle-tested message broker supporting AMQP 0-9-1, AMQP 1.0, MQTT, and STOMP. Offers flexible exchange-based routing, dead-letter exchanges, and quorum queues.  
    *Best for:* Microservices asynchronous RPC, complex message routing, and reliable transactional worker queues.
 
-9. **[Redpanda](https://github.com/redpanda-data/redpanda)** [![GitHub stars](https://img.shields.io/github/stars/redpanda-data/redpanda?style=social&color=white)](https://github.com/redpanda-data/redpanda/stargazers)  
+9. **[Redpanda](https://github.com/redpanda-data/redpanda)** [![GitHub_Stars](https://img.shields.io/github/stars/redpanda-data/redpanda?style=social&color=white)](https://github.com/redpanda-data/redpanda/stargazers)  
    Modern Kafka-compatible streaming engine engineered in C++ using the Seastar thread-per-core asynchronous architecture. Zero JVM, zero ZooKeeper, delivering deterministic sub-millisecond tail latencies.  
    *Best for:* Kafka workloads requiring sub-millisecond p99 latencies, simplified DevOps, and high hardware density.
 
-10. **[Eclipse Mosquitto](https://github.com/eclipse-mosquitto/mosquitto)** [![GitHub stars](https://img.shields.io/github/stars/eclipse-mosquitto/mosquitto?style=social&color=white)](https://github.com/eclipse-mosquitto/mosquitto/stargazers)  
+10. **[Eclipse Mosquitto](https://github.com/eclipse-mosquitto/mosquitto)** [![GitHub_Stars](https://img.shields.io/github/stars/eclipse-mosquitto/mosquitto?style=social&color=white)](https://github.com/eclipse-mosquitto/mosquitto/stargazers)  
     Lightweight open-source message broker implementing MQTT protocols 5.0, 3.1.1, and 3.1 written in C. Ultra-low RAM footprint makes it the universal standard on embedded devices.  
     *Best for:* Embedded Linux gateways, Raspberry Pi appliances, home automation, and constrained edge hardware.
 
-11. **[ZeroMQ (libzmq)](https://github.com/zeromq/libzmq)** [![GitHub stars](https://img.shields.io/github/stars/zeromq/libzmq?style=social&color=white)](https://github.com/zeromq/libzmq/stargazers)  
+11. **[ZeroMQ (libzmq)](https://github.com/zeromq/libzmq)** [![GitHub_Stars](https://img.shields.io/github/stars/zeromq/libzmq?style=social&color=white)](https://github.com/zeromq/libzmq/stargazers)  
     Universal high-performance asynchronous messaging library providing socket-style communication primitives without a centralized broker daemon over inproc, IPC, TCP, and PGM.  
     *Best for:* High-frequency trading (HFT), high-throughput intra-process IPC, and ultra-low-latency peer-to-peer piping.
 
-12. **[Redpanda Connect (formerly Benthos)](https://github.com/redpanda-data/connect)** [![GitHub stars](https://img.shields.io/github/stars/redpanda-data/connect?style=social&color=white)](https://github.com/redpanda-data/connect/stargazers)  
+12. **[Redpanda Connect (formerly Benthos)](https://github.com/redpanda-data/connect)** [![GitHub_Stars](https://img.shields.io/github/stars/redpanda-data/connect?style=social&color=white)](https://github.com/redpanda-data/connect/stargazers)  
     High-performance stream processor and data ingestion tool in Go. Connects diverse sources and sinks with declarative YAML pipelines, dynamic routing, and stateless transformations.  
     *Best for:* Resilient ETL glue, protocol bridging, event deduplication, and streaming ingestion into Kafka/Redpanda.
 
-13. **[Fluent Bit](https://github.com/fluent/fluent-bit)** [![GitHub stars](https://img.shields.io/github/stars/fluent/fluent-bit?style=social&color=white)](https://github.com/fluent/fluent-bit/stargazers)  
+13. **[Fluent Bit](https://github.com/fluent/fluent-bit)** [![GitHub_Stars](https://img.shields.io/github/stars/fluent/fluent-bit?style=social&color=white)](https://github.com/fluent/fluent-bit/stargazers)  
     Super fast, lightweight log and event processor and forwarder for Linux, macOS, and Windows. Highly optimized C codebase designed for Kubernetes and containerized edge workloads.  
     *Best for:* Ingesting logs and events across Kubernetes clusters and forwarding to Kafka, Elasticsearch, or cloud sinks.
 
-14. **[VerneMQ](https://github.com/vernemq/vernemq)** [![GitHub stars](https://img.shields.io/github/stars/vernemq/vernemq?style=social&color=white)](https://github.com/vernemq/vernemq/stargazers)  
+14. **[VerneMQ](https://github.com/vernemq/vernemq)** [![GitHub_Stars](https://img.shields.io/github/stars/vernemq/vernemq?style=social&color=white)](https://github.com/vernemq/vernemq/stargazers)  
     High-performance, distributed MQTT message broker developed in Erlang. Scales horizontally across cluster nodes to handle massive IoT telemetry ingress with high fault tolerance.  
     *Best for:* Distributed IoT fleets and industrial telemetry with horizontal clustering requirements.
 
-15. **[Eclipse Zenoh](https://github.com/eclipse-zenoh/zenoh)** [![GitHub stars](https://img.shields.io/github/stars/eclipse-zenoh/zenoh?style=social&color=white)](https://github.com/eclipse-zenoh/zenoh/stargazers)  
+15. **[Eclipse Zenoh](https://github.com/eclipse-zenoh/zenoh)** [![GitHub_Stars](https://img.shields.io/github/stars/eclipse-zenoh/zenoh?style=social&color=white)](https://github.com/eclipse-zenoh/zenoh/stargazers)  
     Zero-overhead pub/sub, store/query, and distributed compute protocol in Rust. Bridges transparently across MQTT, ROS 2, DDS, and Kafka with minimal wire protocol overhead.  
     *Best for:* Robotics, autonomous driving, WAN-spanning distributed meshes, and edge-to-cloud telemetry.
 
-16. **[Apache ActiveMQ](https://github.com/apache/activemq)** [![GitHub stars](https://img.shields.io/github/stars/apache/activemq?style=social&color=white)](https://github.com/apache/activemq/stargazers)  
+16. **[Apache ActiveMQ](https://github.com/apache/activemq)** [![GitHub_Stars](https://img.shields.io/github/stars/apache/activemq?style=social&color=white)](https://github.com/apache/activemq/stargazers)  
     Classic multi-protocol messaging server supporting JMS 1.1/2.0, AMQP, MQTT, and STOMP. The modern ActiveMQ Artemis project provides an asynchronous non-blocking architecture.  
     *Best for:* Traditional Java enterprise middleware, JMS integration, and multi-protocol legacy system bridging.
 
-17. **[HiveMQ Community Edition](https://github.com/hivemq/hivemq-community-edition)** [![GitHub stars](https://img.shields.io/github/stars/hivemq/hivemq-community-edition?style=social&color=white)](https://github.com/hivemq/hivemq-community-edition/stargazers)  
+17. **[HiveMQ Community Edition](https://github.com/hivemq/hivemq-community-edition)** [![GitHub_Stars](https://img.shields.io/github/stars/hivemq/hivemq-community-edition?style=social&color=white)](https://github.com/hivemq/hivemq-community-edition/stargazers)  
     Open-source Java-based MQTT broker supporting MQTT 3.x and MQTT 5.0 with an extensible plugin architecture and open APIs.  
     *Best for:* Enterprise MQTT testing, custom IoT plugin development, and standard MQTT compliance.
 
-18. **[Busbar](https://github.com/GetBusbar/busbar)** [![GitHub stars](https://img.shields.io/github/stars/GetBusbar/busbar?style=social&color=white)](https://github.com/GetBusbar/busbar/stargazers)  
+18. **[Busbar](https://github.com/GetBusbar/busbar)** [![GitHub_Stars](https://img.shields.io/github/stars/GetBusbar/busbar?style=social&color=white)](https://github.com/GetBusbar/busbar/stargazers)  
     Single-binary AI inference gateway and event router. Distributes, validates, and fails over prompt/completion streams across LLM providers (Anthropic, OpenAI, Gemini, Cohere, Bedrock).  
     *Best for:* Real-time AI stream ingestion, LLM fallback routing, and token budget enforcement.
 
