@@ -1,0 +1,206 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 340" width="100%" height="100%">
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a0e17" />
+      <stop offset="50%" stop-color="#111827" />
+      <stop offset="100%" stop-color="#0f172a" />
+    </linearGradient>
+
+    <!-- Stream Line Gradients -->
+    <linearGradient id="streamGrad1" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00F2FE" stop-opacity="0.1" />
+      <stop offset="50%" stop-color="#4FACFE" stop-opacity="0.8" />
+      <stop offset="100%" stop-color="#00F2FE" stop-opacity="0.1" />
+    </linearGradient>
+
+    <linearGradient id="streamGrad2" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#FF007F" stop-opacity="0.1" />
+      <stop offset="50%" stop-color="#7F00FF" stop-opacity="0.7" />
+      <stop offset="100%" stop-color="#00F5A0" stop-opacity="0.1" />
+    </linearGradient>
+
+    <linearGradient id="titleGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00F2FE" />
+      <stop offset="50%" stop-color="#4FACFE" />
+      <stop offset="100%" stop-color="#00F5A0" />
+    </linearGradient>
+
+    <linearGradient id="pillGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e293b" stop-opacity="0.85" />
+      <stop offset="100%" stop-color="#0f172a" stop-opacity="0.95" />
+    </linearGradient>
+
+    <!-- Grid Pattern -->
+    <pattern id="gridPattern" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#334155" stroke-width="0.75" stroke-opacity="0.25" />
+    </pattern>
+
+    <!-- Glow Filter -->
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="6" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+
+    <style>
+      @keyframes streamFlow {
+        0% { stroke-dashoffset: 1000; }
+        100% { stroke-dashoffset: 0; }
+      }
+      @keyframes pulseGlow {
+        0%, 100% { opacity: 0.4; transform: scale(1); }
+        50% { opacity: 0.9; transform: scale(1.08); }
+      }
+      @keyframes packetMove1 {
+        0% { cx: 40; cy: 70; opacity: 0; }
+        10% { opacity: 1; }
+        90% { opacity: 1; }
+        100% { cx: 1160; cy: 70; opacity: 0; }
+      }
+      @keyframes packetMove2 {
+        0% { cx: 1160; cy: 270; opacity: 0; }
+        10% { opacity: 1; }
+        90% { opacity: 1; }
+        100% { cx: 40; cy: 270; opacity: 0; }
+      }
+      @keyframes badgeHover {
+        0%, 100% { transform: translateY(0px); }
+        50% { transform: translateY(-3px); }
+      }
+      .stream-line-1 {
+        stroke-dasharray: 120 40;
+        animation: streamFlow 18s linear infinite;
+      }
+      .stream-line-2 {
+        stroke-dasharray: 80 50;
+        animation: streamFlow 24s linear reverse infinite;
+      }
+      .packet-1 {
+        animation: packetMove1 7s linear infinite;
+      }
+      .packet-2 {
+        animation: packetMove2 9s linear infinite;
+      }
+      .badge-chip {
+        animation: badgeHover 4s ease-in-out infinite;
+      }
+      .glow-node {
+        animation: pulseGlow 3s ease-in-out infinite;
+      }
+      .banner-title {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        font-weight: 800;
+        letter-spacing: -0.5px;
+      }
+      .banner-sub {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        font-weight: 500;
+        letter-spacing: 0.5px;
+      }
+      .tag-text {
+        font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+        font-size: 11px;
+        font-weight: 600;
+      }
+    </style>
+  </defs>
+
+  <!-- Background Base -->
+  <rect width="1200" height="340" fill="url(#bgGrad)" rx="16" />
+  <rect width="1200" height="340" fill="url(#gridPattern)" rx="16" />
+
+  <!-- Outer Border Highlight -->
+  <rect width="1198" height="338" x="1" y="1" rx="15" fill="none" stroke="#38bdf8" stroke-opacity="0.3" stroke-width="1.5" />
+
+  <!-- Ambient Glow Spots -->
+  <circle cx="200" cy="170" r="140" fill="#00F2FE" opacity="0.08" filter="url(#glow)" />
+  <circle cx="1000" cy="170" r="160" fill="#7F00FF" opacity="0.09" filter="url(#glow)" />
+
+  <!-- Dynamic Animated Streaming Pipelines (Background Layer) -->
+  <path class="stream-line-1" d="M 0,70 Q 300,30 600,70 T 1200,70" fill="none" stroke="url(#streamGrad1)" stroke-width="3" />
+  <path class="stream-line-2" d="M 0,270 Q 300,310 600,270 T 1200,270" fill="none" stroke="url(#streamGrad2)" stroke-width="3" />
+  
+  <path d="M 0,110 C 350,140 850,50 1200,110" fill="none" stroke="#4FACFE" stroke-opacity="0.18" stroke-width="1.5" stroke-dasharray="8 8" />
+  <path d="M 0,230 C 350,200 850,290 1200,230" fill="none" stroke="#00F5A0" stroke-opacity="0.18" stroke-width="1.5" stroke-dasharray="8 8" />
+
+  <!-- Animated Stream Packets -->
+  <circle class="packet-1" cx="40" cy="70" r="5" fill="#00F2FE" filter="url(#glow)" />
+  <circle class="packet-2" cx="1160" cy="270" r="5" fill="#FF007F" filter="url(#glow)" />
+
+  <!-- Pipeline Network Nodes -->
+  <g class="glow-node" transform-origin="150 70">
+    <circle cx="150" cy="70" r="7" fill="#00F2FE" />
+    <circle cx="150" cy="70" r="14" fill="none" stroke="#00F2FE" stroke-width="1.5" opacity="0.6" />
+  </g>
+  <g class="glow-node" transform-origin="1050 270">
+    <circle cx="1050" cy="270" r="7" fill="#00F5A0" />
+    <circle cx="1050" cy="270" r="14" fill="none" stroke="#00F5A0" stroke-width="1.5" opacity="0.6" />
+  </g>
+
+  <!-- Foreground Content Container (Ensures 100% Clear Readability) -->
+  <g id="foreground-content">
+    <!-- Center Hero Card Backdrop -->
+    <rect x="180" y="55" width="840" height="180" rx="16" fill="url(#pillGrad)" stroke="#334155" stroke-width="1.2" stroke-opacity="0.7" />
+
+    <!-- Top Status Badge -->
+    <g transform="translate(485, 75)">
+      <rect x="0" y="0" width="230" height="26" rx="13" fill="#1e293b" stroke="#38bdf8" stroke-opacity="0.4" stroke-width="1" />
+      <circle cx="14" cy="13" r="4" fill="#00F5A0" />
+      <text x="28" y="17" fill="#94a3b8" class="tag-text">HIGH-THROUGHPUT STREAMING</text>
+    </g>
+
+    <!-- Main Title -->
+    <text x="600" y="148" text-anchor="middle" class="banner-title" font-size="38" fill="url(#titleGrad)" font-weight="900">
+      Awesome Event Streaming &amp; Ingestion
+    </text>
+
+    <!-- Subtitle -->
+    <text x="600" y="188" text-anchor="middle" class="banner-sub" font-size="16" fill="#cbd5e1">
+      Distributed Message Brokers • Real-Time Ingestion • Cloud &amp; Self-Hosted Stream Infrastructure
+    </text>
+
+    <!-- Floating Tech Ecosystem Badges (Bottom Row) -->
+    <g class="badge-chip" transform="translate(140, 256)">
+      <!-- Kafka -->
+      <g transform="translate(0, 0)">
+        <rect width="105" height="34" rx="17" fill="#0f172a" stroke="#4facfe" stroke-width="1.2" />
+        <text x="52" y="21" text-anchor="middle" fill="#e2e8f0" class="tag-text">⚡ Kafka</text>
+      </g>
+      <!-- Redpanda -->
+      <g transform="translate(115, 0)">
+        <rect width="115" height="34" rx="17" fill="#0f172a" stroke="#ff4d4d" stroke-width="1.2" />
+        <text x="57" y="21" text-anchor="middle" fill="#e2e8f0" class="tag-text">🐼 Redpanda</text>
+      </g>
+      <!-- Pulsar -->
+      <g transform="translate(240, 0)">
+        <rect width="105" height="34" rx="17" fill="#0f172a" stroke="#1890ff" stroke-width="1.2" />
+        <text x="52" y="21" text-anchor="middle" fill="#e2e8f0" class="tag-text">🌊 Pulsar</text>
+      </g>
+      <!-- RabbitMQ -->
+      <g transform="translate(355, 0)">
+        <rect width="115" height="34" rx="17" fill="#0f172a" stroke="#ff6600" stroke-width="1.2" />
+        <text x="57" y="21" text-anchor="middle" fill="#e2e8f0" class="tag-text">🐇 RabbitMQ</text>
+      </g>
+      <!-- Flink -->
+      <g transform="translate(480, 0)">
+        <rect width="95" height="34" rx="17" fill="#0f172a" stroke="#e65100" stroke-width="1.2" />
+        <text x="47" y="21" text-anchor="middle" fill="#e2e8f0" class="tag-text">🐿️ Flink</text>
+      </g>
+      <!-- Vector -->
+      <g transform="translate(585, 0)">
+        <rect width="100" height="34" rx="17" fill="#0f172a" stroke="#9333ea" stroke-width="1.2" />
+        <text x="50" y="21" text-anchor="middle" fill="#e2e8f0" class="tag-text">📐 Vector</text>
+      </g>
+      <!-- NATS -->
+      <g transform="translate(695, 0)">
+        <rect width="95" height="34" rx="17" fill="#0f172a" stroke="#22c55e" stroke-width="1.2" />
+        <text x="47" y="21" text-anchor="middle" fill="#e2e8f0" class="tag-text">🚀 NATS</text>
+      </g>
+      <!-- MQTT -->
+      <g transform="translate(800, 0)">
+        <rect width="115" height="34" rx="17" fill="#0f172a" stroke="#673ab7" stroke-width="1.2" />
+        <text x="57" y="21" text-anchor="middle" fill="#e2e8f0" class="tag-text">📡 MQTT / IoT</text>
+      </g>
+    </g>
+  </g>
+</svg>

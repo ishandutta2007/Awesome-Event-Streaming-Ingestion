@@ -1,217 +1,175 @@
-# Awesome-Event-Streaming-Ingestion
-
-## Top Event Streaming & Ingestion Ecosystem
-
-
-
-**Curated List of SaaS Products & Open-Source GitHub Projects**  
-
-*Focused on High-Throughput Event Ingestion, Message Brokers & Self-Hosted Streaming Infrastructure*  
-
-**Last updated: October 2026**
-
-
-
-This repository tracks notable **SaaS platforms** and **open-source projects** for **Event Streaming & Ingestion**. These tools enable applications and organizations to ingest, route, buffer, and process high-volume event streams in real time—powering data pipelines, microservices communication, IoT telemetry, and AI system backends.
-
-
-
-**Examples** include Confluent Cloud, Amazon MSK, Redpanda Cloud, Azure Event Hubs, Google Cloud Pub/Sub, IBM MQ, Solace PubSub+, CloudKarafka, and HiveMQ (the category leaders).
-
-
-
-**Open-source emphasis**: This section is heavily expanded with every major active project for self-hosting, protocol flexibility, and transparent event infrastructure—ideal for teams that need data sovereignty, avoid per-message SaaS fees, and require auditable streaming pipelines. The open-source landscape is anchored by **Apache Kafka** (the distributed log standard), **Redpanda** (Kafka-compatible without JVM/ZooKeeper), **Apache Pulsar** (multi-tenant pub-sub), and **RabbitMQ** (mature message broker), with specialized options like **HiveMQ** and **Mosquitto** for MQTT/IoT ingestion, and emerging projects like **Busbar** for AI-specific routing.
-
-
-
-Contributions welcome! Open a PR to add/update entries. Keep descriptions factual and link to official sites.
-
-
-
-## Table of Contents
-
-- [SaaS/Hosted Platforms](#saas-hosted-platforms)
-
-- [Open-Source GitHub Projects](#open-source-github-projects)
-
-- [How to Contribute](#how-to-contribute)
-
-- [Disclaimer](#disclaimer)
-
-
-
-## SaaS/Hosted Platforms
-
-
-
-- **[Confluent Cloud](https://www.confluent.io/confluent-cloud/)**  
-
-  Fully managed Kafka service from the company founded by Kafka's creators. Offers Schema Registry, ksqlDB, and Connectors as managed add-ons. The reference platform for teams that want Kafka without operational burden.
-
-
-
-- **[Amazon MSK](https://aws.amazon.com/msk/)**  
-
-  AWS's managed Kafka service with IAM, mTLS, and SASL/SCRAM authentication. Integrates with CloudWatch for metrics and S3/CloudWatch/Firehose for log delivery. Best for AWS-native architectures requiring managed Kafka.
-
-
-
-- **[Redpanda Cloud](https://redpanda.com/cloud)**  
-
-  Kafka-compatible streaming platform with Serverless, Dedicated, and BYOC deployment options. Serverless tier bills by ingress, egress, partitions, and retained data. Kafka API compatible, so existing clients work without code changes.
-
-
-
-- **[Azure Event Hubs](https://azure.microsoft.com/en-us/products/event-hubs/)**  
-
-  Azure's native event streaming platform with built-in Apache Kafka compatibility. Standard tier supports 1MB max event size and 7-day retention; Premium extends to 90-day retention and 100 consumer groups. Best for Azure-native workloads wanting Kafka compatibility.
-
-
-
-- **[Google Cloud Pub/Sub](https://cloud.google.com/pubsub)**  
-
-  Google's globally distributed messaging service. Not natively Kafka-compatible—migration requires client changes. Supports message ordering via ordering keys, dead-letter topics, and up to 31 days retention. Best for GCP-native architectures that don't require Kafka protocol.
-
-
-
-- **[IBM MQ](https://www.ibm.com/products/mq)**  
-
-  Enterprise messaging middleware with deep mainframe and IBM ecosystem integration. Reliable, secure, and scalable for mission-critical integration. Proprietary and typically enterprise-priced.
-
-
-
-- **[Solace PubSub+](https://solace.com/)**  
-
-  Event streaming and management platform supporting multiple protocols (AMQP, MQTT, JMS, REST) with a unified broker. Strong for hybrid cloud and IoT use cases.
-
-
-
-- **[CloudKarafka](https://www.cloudkarafka.com/)**  
-
-  Hosted Apache Kafka service with plans from $49/month (Developer) to $499 (Business). 99.95% SLA on dedicated plans. Note: CloudKarafka was discontinued; verify availability before committing .
-
-
-
-- **[HiveMQ Cloud](https://www.hivemq.com/)**  
-
-  Managed MQTT broker for IoT and event-driven architectures. The open-source HiveMQ Community Edition can be self-hosted; the cloud tier adds managed infrastructure and enterprise features .
-
-
-
-## Open-Source GitHub Projects
-
-
-
-- **[Apache Kafka](https://github.com/apache/kafka)**  
-
-  The distributed event streaming platform standard. High-throughput, fault-tolerant, durable log storage. Requires JVM and (historically) ZooKeeper, though KRaft mode eliminates ZooKeeper in newer versions. Apache 2.0 licensed with 31k+ stars . Best for organizations that need the full Kafka ecosystem and can manage operational complexity.
-
-
-
-- **[Redpanda](https://github.com/redpanda-data/redpanda)**  
-
-  Kafka API-compatible streaming platform built in C++ with no JVM or ZooKeeper. Claims up to 10x performance improvement over Apache Kafka with simpler operations. Source-available under BSL with a free Community Edition . Best for teams that want Kafka compatibility without Kafka's operational overhead.
-
-
-
-- **[Apache Pulsar](https://github.com/apache/pulsar)**  
-
-  Distributed pub-sub messaging system with multi-tenancy, tiered storage, and strong durability guarantees. Apache 2.0 licensed with 13,950+ stars . Best for organizations that need multi-tenant event streaming with geo-replication.
-
-
-
-- **[RabbitMQ](https://github.com/rabbitmq/rabbitmq-server)**  
-
-  Mature, widely-deployed open-source message broker supporting AMQP, MQTT, and STOMP. Flexible routing via exchanges and queues. Best for traditional message queue workloads and microservices communication requiring complex routing logic.
-
-
-
-- **[Apache RocketMQ](https://github.com/apache/rocketmq)**  
-
-  Cloud-native messaging and streaming platform with low latency and high throughput. Java-based, Apache 2.0 licensed. Popular in Chinese enterprise environments . Best for teams that need a Kafka alternative with different tradeoffs.
-
-
-
-- **[Apache ActiveMQ](https://github.com/apache/activemq)**  
-
-  High-performance multi-protocol message broker supporting JMS, AMQP, MQTT, and STOMP. Apache 2.0 licensed, Apache top-level project . Best for JMS-centric enterprise environments and legacy Java integration.
-
-
-
-- **[HiveMQ Community Edition](https://github.com/hivemq/hivemq-community-edition)**  
-
-  Open-source MQTT broker for IoT and event-driven architectures. Java-based with a plugin system. The Community Edition is free; enterprise extensions add clustering and advanced security . Best for IoT ingestion pipelines requiring MQTT protocol support.
-
-
-
-- **[Eclipse Mosquitto](https://github.com/eclipse/mosquitto)**  
-
-  Lightweight open-source MQTT broker written in C. Fully supports MQTT 3.1 and 3.1.1. Small footprint makes it suitable for constrained devices and edge deployments . Best for resource-constrained IoT gateways.
-
-
-
-- **[Eclipse Zenoh](https://github.com/eclipse-zenoh/zenoh)**  
-
-  Next-generation pub-sub/overlay protocol with native bridges to MQTT, Kafka, and WebSocket. Dual-licensed EPL-2.0/Apache-2.0 with 2.8k+ stars . Best for robotic, edge, and WAN-spanning deployments where traditional brokers become bottlenecks.
-
-
-
-- **[Busbar](https://github.com/GetBusbar/busbar)**  
-
-  Single-binary AI control plane that routes and fails over requests across AI providers (Anthropic, OpenAI, Gemini, Cohere, Bedrock). Apache 2.0 licensed, ~5MB Docker image. Provides one endpoint for chat, embeddings, images, and audio with budget enforcement and observability . **Note**: While positioned for AI routing rather than general event streaming, it's an emerging option for AI-specific ingestion and failover.
-
-
-
-### Additional Strong Open-Source Options
-
-
-
-- **ZeroMQ** — High-performance asynchronous messaging library rather than a broker. Best for low-latency, broker-less messaging within applications .
-
-- **Apache Qpid** — AMQP-compliant messaging tools with multi-language support. Best for AMQP-centric enterprise integration .
-
-- **VerneMQ** — Distributed MQTT broker in Erlang, scales horizontally for high connection counts. Best for large-scale IoT deployments .
-
-- **Frameworks for building custom systems**: Pair **Apache Kafka** or **Redpanda** as the durable event backbone with **HiveMQ** or **Mosquitto** for IoT MQTT ingestion, and **Busbar** for AI provider routing. Use **RabbitMQ** for complex routing logic and **Pulsar** when multi-tenancy is required.
-
-
-
-## How to Contribute
-
-
-
-1. Fork the repo.
-
-2. Add/edit entries in `README.md` (follow existing format).
-
-3. Include: name, link, 1–2 sentence description, and whether it's SaaS or open-source.
-
-4. Submit PR with a short explanation.
-
-
-
-Star the repo if you find it useful!
-
-
-
-## Disclaimer
-
-
-
-- This is a **community-curated** list — not exhaustive and not an endorsement.
-
-- Event streaming platforms vary significantly in throughput characteristics, operational complexity, and protocol support; benchmark against your workload before committing.
-
-- Self-hosted streaming infrastructure requires proper cluster sizing, replication configuration, monitoring, and disaster recovery planning.
-
-- CloudKarafka appears to have discontinued service; verify current availability before selecting it .
-
-
+<p align="center">
+  <img src="./assets/banner.svg" alt="Awesome Event Streaming &amp; Ingestion Banner" width="100%" />
+</p>
+
+<p align="center">
+  <a href="https://github.com/ishandutta2007/Awesome-Awesome-Awesome"><img src="https://img.shields.io/badge/Awesome-%E2%9C%94-blueviolet?style=flat-square&logo=github" alt="Awesome"/></a><a href="https://discord.gg/jc4xtF58Ve"><img src="https://img.shields.io/badge/Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white" alt="Discord" /></a>
+  <a href="https://github.com/ishandutta2007/Awesome-Event-Streaming-Ingestion/stargazers"><img src="https://img.shields.io/github/stars/ishandutta2007/Awesome-Event-Streaming-Ingestion?style=flat-square&logo=github&color=gold" alt="GitHub Stars" /></a>
+  <a href="https://github.com/ishandutta2007/Awesome-Event-Streaming-Ingestion/network/members"><img src="https://img.shields.io/github/forks/ishandutta2007/Awesome-Event-Streaming-Ingestion?style=flat-square&logo=github&color=blue" alt="GitHub Forks" /></a>
+  <a href="https://github.com/ishandutta2007/Awesome-Event-Streaming-Ingestion/blob/main/LICENSE"><img src="https://img.shields.io/badge/License-MIT-green.svg?style=flat-square" alt="License: MIT" /></a>
+  <a href="https://github.com/ishandutta2007/Awesome-Event-Streaming-Ingestion/pulls"><img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square" alt="PRs Welcome" /></a>
+  <a href="https://github.com/ishandutta2007"><img alt="GitHub followers" src="https://img.shields.io/github/followers/ishanuutta2007?label=Follow" /></a>
+</p>
 
 ---
 
+# ⚡ Awesome Event Streaming & Ingestion
 
+> 🚀 **A curated directory of high-throughput event ingestion engines, distributed message brokers, real-time stream processing frameworks, and cloud streaming platforms.**
 
-**Made for data engineers, platform teams, IoT architects, and developers building real-time event-driven systems.**  
+Whether you are architecting a planetary-scale microservices fabric, building low-latency AI inference and LLM routing pipelines, ingesting telemetry from millions of IoT sensors, or streaming CDC (Change Data Capture) logs into modern data lakes, this repository provides a definitive, unbiased guide to both **managed SaaS platforms** and **self-hosted open-source projects**.
 
-Let's make event streaming and ingestion more open, compatible, and accessible.
+---
+
+## 📑 Table of Contents
+
+- [📊 Sector Overview & Market Dynamics](#-sector-overview--market-dynamics)
+- [☁️ Managed SaaS & Cloud Platforms](#️-managed-saas--cloud-platforms)
+- [🐙 Open-Source GitHub Projects](#-open-source-github-projects)
+- [🧭 Architecture & Selection Matrix](#-architecture--selection-matrix)
+- [🤝 How to Contribute](#-how-to-contribute)
+- [📈 Star History](#-star-history)
+- [📜 Disclaimer & License](#-disclaimer--license)
+
+---
+
+## 📊 Sector Overview & Market Dynamics
+
+The global **Event Stream Processing & Real-Time Data Ingestion** market is valued at approximately **$28.5 Billion** and is projected to surpass **$74 Billion by 2030**, compounding at a rapid **CAGR of ~22.8%**, driven by the relentless demand for instantaneous AI inference, real-time analytics, fraud detection, and connected IoT ecosystems.
+
+The sector exhibits **moderate concentration** at the foundational enterprise backbone layer—heavily anchored by hyperscale cloud platforms (Microsoft Azure, AWS, Google Cloud) and the de-facto Apache Kafka standard spearheaded by Confluent. However, the ecosystem displays **vibrant and aggressive peripheral fragmentation**: specialized modern challengers are emerging rapidly to capture latency-sensitive niches, including zero-JVM C++/Rust streaming engines (Redpanda, Vector), lightweight edge and IoT pub/sub protocols (MQTT, Zenoh, EMQX), and developer-friendly serverless pay-per-event architectures (Upstash).
+
+---
+
+## ☁️ Managed SaaS & Cloud Platforms
+
+A comprehensive comparison of leading managed and serverless event streaming services, ranked in descending order by **Company Size / Valuation / Scale**.
+
+| 🏢 Platform | 🏷️ Provider / Ecosystem | 💰 Specific Starting Pricing | 🎁 Specific Free Tier / Trial Limits | 📈 Company Scale (Valuation / Revenue) |
+| :--- | :--- | :--- | :--- | :--- |
+| **[Azure Event Hubs](https://azure.microsoft.com/en-us/products/event-hubs/)** | Microsoft Azure | **$0.015/hour** per Throughput Unit (~$11/mo base) + **$0.028 per 1M events** (Basic); Standard at **$0.03/hour** per TU (~$22/mo) | **30-Day Free Trial** with **$200 in Azure credits**; no perpetual standalone free tier | **$3.1 Trillion** (Market Cap) / **$245B+** Revenue |
+| **[Google Cloud Pub/Sub](https://cloud.google.com/pubsub)** | Google Cloud | **$40.00 per TiB** ($0.039/GiB) for data ingestion and delivery; **$0.27/GiB-month** for storage | **Perpetual Free Tier**: First **10 GiB** message volume free every month + **90-day trial with $300 credits** | **$2.1 Trillion** (Market Cap) / **$307B+** Revenue |
+| **[Amazon MSK](https://aws.amazon.com/msk/)** | Amazon Web Services | **$0.042/hour** (~$30.24/month) per `kafka.t3.small` broker (Provisioned); Serverless from **$0.75/cluster-hour** + **$0.10/GB** ingress | **3-Month Free Trial**: **750 hours/month** of single-broker `kafka.t3.small` cluster under AWS Free Tier | **$2.0 Trillion** (Market Cap) / **$575B+** Revenue |
+| **[IBM MQ on Cloud](https://www.ibm.com/products/mq)** | IBM Cloud | **$0.278/hour** (~$200/month) for Reserved Small Queue Manager instance | **30-Day Free Trial** with **$200 IBM Cloud credits**; free perpetual Developer Edition for non-production local use | **$200+ Billion** (Market Cap) / **$62B+** Revenue |
+| **[Confluent Cloud](https://www.confluent.io/confluent-cloud/)** | Confluent | **$0.00/hour** base (Basic Cluster) + **$0.13/GB ingress**, **$0.13/GB egress**, **$0.10/GB-month storage**, and **$0.015/partition-hour** | **30-Day Free Trial** with **$400 free usage credits** for new signups | **$7.5 Billion** (Market Cap - CFLT) / **$915M+** ARR |
+| **[Aiven for Apache Kafka](https://aiven.io/kafka)** | Aiven | **$0.33/hour** (~$240/month) for Startup-4 plan (3 nodes, 4 GB RAM, 80 GB NVMe storage, 99.95% SLA) | **30-Day Free Trial** with **$300 credits** on account creation (no credit card required) | **$3.0 Billion** (Series D Valuation) / **$100M+** ARR |
+| **[Solace PubSub+ Cloud](https://solace.com/products/event-broker/cloud/)** | Solace | **$0.05/service-hour** (~$36/month) for Developer/Nano instance; Standard production clusters start at **$380/month** | **Perpetual Free Tier**: Free Developer instance with **100 concurrent connections**, **50 msgs/sec**, and **1 GB storage** | **$1.0 Billion** (Estimated Valuation) / **$150M+** ARR |
+| **[Redpanda Cloud](https://redpanda.com/cloud)** | Redpanda Data | **$0.00/hour** base (Serverless) + **$0.10/GB ingress**, **$0.10/GB egress**, **$0.10/GB-month storage**, and **$0.001/partition-hour** | **14-Day Free Trial** with **$100 serverless usage credits**; no credit card required | **$450 Million** (Series C Valuation) / Raised **$165M+** |
+| **[HiveMQ Cloud](https://www.hivemq.com/pricing/)** | HiveMQ | **$1.50 per 1M messages** + **$0.15/GB data transfer** (Pay-as-you-go); Starter managed clusters from **$49/month** | **Perpetual Free Tier**: Connect up to **100 IoT devices**, **10 GB/month data transfer**, and **3-day retention** | **$200 Million** (Series A Valuation) / Market leader in MQTT |
+| **[Upstash Kafka](https://upstash.com/pricing/kafka)** | Upstash | **$0.60 per 100,000 messages** ($0.000006/msg), capped at a maximum of **$120/month per topic** | **Perpetual Free Tier**: **10,000 messages/day** (~300,000 messages/mo), **256 MB data transfer/day**, 1 cluster | **$80 Million** (Series A Valuation, backed by a16z) |
+
+---
+
+## 🐙 Open-Source GitHub Projects
+
+Self-hosted, transparent, and protocol-flexible event streaming engines, brokers, and ingestion pipelines. Sorted in descending order by **GitHub Star Count**.
+
+1. **[Apache Kafka](https://github.com/apache/kafka)** [![GitHub stars](https://img.shields.io/github/stars/apache/kafka?style=social&color=white)](https://github.com/apache/kafka/stargazers)  
+   The industry-standard distributed event streaming platform. Provides ultra-high-throughput, fault-tolerant, durable log storage with strong ordering semantics. Modern KRaft mode eliminates ZooKeeper dependencies.  
+   *Best for:* Mission-critical enterprise streaming backbones, CDC pipelines, and large-scale data lake ingestion.
+
+2. **[Apache Flink](https://github.com/apache/flink)** [![GitHub stars](https://img.shields.io/github/stars/apache/flink?style=social&color=white)](https://github.com/apache/flink/stargazers)  
+   Stateful stream processing framework over unbounded and bounded data streams. Features low event-latency, exactly-once processing guarantees, and robust state and checkpoint management.  
+   *Best for:* Complex real-time event analytics, streaming CEP (Complex Event Processing), and dynamic sliding-window calculations.
+
+3. **[Vector](https://github.com/vectordotdev/vector)** [![GitHub stars](https://img.shields.io/github/stars/vectordotdev/vector?style=social&color=white)](https://github.com/vectordotdev/vector/stargazers)  
+   High-performance observability and event data pipeline written in Rust. Ingests, transforms, and routes logs, metrics, and event streams with memory safety and minimal resource footprint.  
+   *Best for:* High-throughput log and telemetry ingestion, routing, and schema transformation before downstream brokers.
+
+4. **[Apache RocketMQ](https://github.com/apache/rocketmq)** [![GitHub stars](https://img.shields.io/github/stars/apache/rocketmq?style=social&color=white)](https://github.com/apache/rocketmq/stargazers)  
+   Cloud-native distributed messaging and streaming platform designed for low-latency, massive message accumulation, and financial-grade reliability. Developed originally by Alibaba.  
+   *Best for:* E-commerce transaction processing, ordered message delivery, and large-scale enterprise messaging backplanes.
+
+5. **[NATS Server](https://github.com/nats-io/nats-server)** [![GitHub stars](https://img.shields.io/github/stars/nats-io/nats-server?style=social&color=white)](https://github.com/nats-io/nats-server/stargazers)  
+   Connective technology for adaptive edge, IoT, and cloud distributed systems written in Go. Features JetStream for persistence, key-value storage, and object streaming at millions of msgs/sec.  
+   *Best for:* Microservices pub/sub, edge computing, dynamic multi-cloud meshes, and lightweight persistent event logs.
+
+6. **[EMQX](https://github.com/emqx/emqx)** [![GitHub stars](https://img.shields.io/github/stars/emqx/emqx?style=social&color=white)](https://github.com/emqx/emqx/stargazers)  
+   World's most scalable open-source MQTT message broker for IoT and industrial automation. Written in Erlang/OTP, capable of handling 100M+ concurrent MQTT connections in a single cluster.  
+   *Best for:* Massive IoT fleet telemetry ingestion, smart cities, and vehicle-to-everything (V2X) streaming.
+
+7. **[Apache Pulsar](https://github.com/apache/pulsar)** [![GitHub stars](https://img.shields.io/github/stars/apache/pulsar?style=social&color=white)](https://github.com/apache/pulsar/stargazers)  
+   Distributed pub-sub messaging and streaming platform separating computation from storage (Apache BookKeeper). Natively supports multi-tenancy, tiered cold storage, and geo-replication.  
+   *Best for:* Multi-tenant SaaS architectures, geo-distributed streaming clusters, and long-term event retention.
+
+8. **[RabbitMQ](https://github.com/rabbitmq/rabbitmq-server)** [![GitHub stars](https://img.shields.io/github/stars/rabbitmq/rabbitmq-server?style=social&color=white)](https://github.com/rabbitmq/rabbitmq-server/stargazers)  
+   Extremely mature, battle-tested message broker supporting AMQP 0-9-1, AMQP 1.0, MQTT, and STOMP. Offers flexible exchange-based routing, dead-letter exchanges, and quorum queues.  
+   *Best for:* Microservices asynchronous RPC, complex message routing, and reliable transactional worker queues.
+
+9. **[Redpanda](https://github.com/redpanda-data/redpanda)** [![GitHub stars](https://img.shields.io/github/stars/redpanda-data/redpanda?style=social&color=white)](https://github.com/redpanda-data/redpanda/stargazers)  
+   Modern Kafka-compatible streaming engine engineered in C++ using the Seastar thread-per-core asynchronous architecture. Zero JVM, zero ZooKeeper, delivering deterministic sub-millisecond tail latencies.  
+   *Best for:* Kafka workloads requiring sub-millisecond p99 latencies, simplified DevOps, and high hardware density.
+
+10. **[Eclipse Mosquitto](https://github.com/eclipse-mosquitto/mosquitto)** [![GitHub stars](https://img.shields.io/github/stars/eclipse-mosquitto/mosquitto?style=social&color=white)](https://github.com/eclipse-mosquitto/mosquitto/stargazers)  
+    Lightweight open-source message broker implementing MQTT protocols 5.0, 3.1.1, and 3.1 written in C. Ultra-low RAM footprint makes it the universal standard on embedded devices.  
+    *Best for:* Embedded Linux gateways, Raspberry Pi appliances, home automation, and constrained edge hardware.
+
+11. **[ZeroMQ (libzmq)](https://github.com/zeromq/libzmq)** [![GitHub stars](https://img.shields.io/github/stars/zeromq/libzmq?style=social&color=white)](https://github.com/zeromq/libzmq/stargazers)  
+    Universal high-performance asynchronous messaging library providing socket-style communication primitives without a centralized broker daemon over inproc, IPC, TCP, and PGM.  
+    *Best for:* High-frequency trading (HFT), high-throughput intra-process IPC, and ultra-low-latency peer-to-peer piping.
+
+12. **[Redpanda Connect (formerly Benthos)](https://github.com/redpanda-data/connect)** [![GitHub stars](https://img.shields.io/github/stars/redpanda-data/connect?style=social&color=white)](https://github.com/redpanda-data/connect/stargazers)  
+    High-performance stream processor and data ingestion tool in Go. Connects diverse sources and sinks with declarative YAML pipelines, dynamic routing, and stateless transformations.  
+    *Best for:* Resilient ETL glue, protocol bridging, event deduplication, and streaming ingestion into Kafka/Redpanda.
+
+13. **[Fluent Bit](https://github.com/fluent/fluent-bit)** [![GitHub stars](https://img.shields.io/github/stars/fluent/fluent-bit?style=social&color=white)](https://github.com/fluent/fluent-bit/stargazers)  
+    Super fast, lightweight log and event processor and forwarder for Linux, macOS, and Windows. Highly optimized C codebase designed for Kubernetes and containerized edge workloads.  
+    *Best for:* Ingesting logs and events across Kubernetes clusters and forwarding to Kafka, Elasticsearch, or cloud sinks.
+
+14. **[VerneMQ](https://github.com/vernemq/vernemq)** [![GitHub stars](https://img.shields.io/github/stars/vernemq/vernemq?style=social&color=white)](https://github.com/vernemq/vernemq/stargazers)  
+    High-performance, distributed MQTT message broker developed in Erlang. Scales horizontally across cluster nodes to handle massive IoT telemetry ingress with high fault tolerance.  
+    *Best for:* Distributed IoT fleets and industrial telemetry with horizontal clustering requirements.
+
+15. **[Eclipse Zenoh](https://github.com/eclipse-zenoh/zenoh)** [![GitHub stars](https://img.shields.io/github/stars/eclipse-zenoh/zenoh?style=social&color=white)](https://github.com/eclipse-zenoh/zenoh/stargazers)  
+    Zero-overhead pub/sub, store/query, and distributed compute protocol in Rust. Bridges transparently across MQTT, ROS 2, DDS, and Kafka with minimal wire protocol overhead.  
+    *Best for:* Robotics, autonomous driving, WAN-spanning distributed meshes, and edge-to-cloud telemetry.
+
+16. **[Apache ActiveMQ](https://github.com/apache/activemq)** [![GitHub stars](https://img.shields.io/github/stars/apache/activemq?style=social&color=white)](https://github.com/apache/activemq/stargazers)  
+    Classic multi-protocol messaging server supporting JMS 1.1/2.0, AMQP, MQTT, and STOMP. The modern ActiveMQ Artemis project provides an asynchronous non-blocking architecture.  
+    *Best for:* Traditional Java enterprise middleware, JMS integration, and multi-protocol legacy system bridging.
+
+17. **[HiveMQ Community Edition](https://github.com/hivemq/hivemq-community-edition)** [![GitHub stars](https://img.shields.io/github/stars/hivemq/hivemq-community-edition?style=social&color=white)](https://github.com/hivemq/hivemq-community-edition/stargazers)  
+    Open-source Java-based MQTT broker supporting MQTT 3.x and MQTT 5.0 with an extensible plugin architecture and open APIs.  
+    *Best for:* Enterprise MQTT testing, custom IoT plugin development, and standard MQTT compliance.
+
+18. **[Busbar](https://github.com/GetBusbar/busbar)** [![GitHub stars](https://img.shields.io/github/stars/GetBusbar/busbar?style=social&color=white)](https://github.com/GetBusbar/busbar/stargazers)  
+    Single-binary AI inference gateway and event router. Distributes, validates, and fails over prompt/completion streams across LLM providers (Anthropic, OpenAI, Gemini, Cohere, Bedrock).  
+    *Best for:* Real-time AI stream ingestion, LLM fallback routing, and token budget enforcement.
+
+---
+
+## 🧭 Architecture & Selection Matrix
+
+| Workload Requirement | Recommended Solutions | Rationale |
+| :--- | :--- | :--- |
+| **High-Throughput Persistent Log Backbone** | `Apache Kafka`, `Redpanda`, `Confluent Cloud` | Strict partition-level ordering, disk durability, massive ecosystem connectors. |
+| **Microservices Messaging & Complex Routing** | `RabbitMQ`, `NATS Server` | Exchange bindings, AMQP pattern matching, request-reply semantics, lightweight footprint. |
+| **Massive IoT Telemetry Ingestion** | `EMQX`, `Eclipse Mosquitto`, `HiveMQ Cloud` | High concurrent MQTT connections, low packet overhead, QoS delivery guarantees. |
+| **Stateful Stream Processing & Analytics** | `Apache Flink` | Sub-second stateful windows, complex event processing, exactly-once stream semantics. |
+| **Observability & Log Ingestion Pipeline** | `Vector`, `Fluent Bit`, `Redpanda Connect` | High wire throughput, minimal CPU/memory overhead, rich input/output plugin ecosystem. |
+| **Edge-to-Cloud & Robotics Streaming** | `Eclipse Zenoh`, `ZeroMQ` | Sub-millisecond peer-to-peer transport, wire efficiency, minimal broker overhead. |
+
+---
+
+## 🤝 How to Contribute
+
+Contributions are warmly welcomed! Help keep this ecosystem guide fresh, accurate, and comprehensive:
+
+1. 🍴 **Fork the repository** to your personal GitHub account.
+2. 🌿 **Create a feature branch** (`git checkout -b feat/add-awesome-streaming-tool`).
+3. ✏️ **Add or edit entries** following the tabular structure for SaaS or the star-ranked format for open source.
+4. 📝 **Ensure high-quality entries**: Include accurate pricing, official links, and objective descriptions.
+5. 🚀 **Submit a Pull Request** with a brief overview of what you added or updated.
+
+---
+
+## 📈 Star History
+
+[![Star History Chart](https://star-history.dera.page/svg?repos=ishandutta2007/Awesome-Event-Streaming-Ingestion&type=date&legend=top-left)](https://star-history.dera.page/#ishandutta2007/Awesome-Event-Streaming-Ingestion&type=date&legend=top-left)
+
+---
+
+## 📜 Disclaimer & License
+
+- **Disclaimer**: This repository is a community-maintained curated index. Trademarks and product names belong to their respective owners. Mention does not constitute an endorsement.
+- **License**: Released under the [MIT License](file:///C:/Users/ishan/Documents/Projects/Awesome-Event-Streaming-Ingestion/LICENSE).
