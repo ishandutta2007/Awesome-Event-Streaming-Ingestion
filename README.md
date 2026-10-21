@@ -28,6 +28,7 @@ Whether you are architecting a planetary-scale microservices fabric, building lo
 - [🐙 Open-Source GitHub Projects](#-open-source-github-projects)
 - [🧭 Architecture & Selection Matrix](#-architecture--selection-matrix)
 - [🤝 How to Contribute](#-how-to-contribute)
+- [💖 Support & Sponsorship](#-support--sponsorship)
 - [📈 Star History](#-star-history)
 - [📜 Disclaimer & License](#-disclaimer--license)
 
@@ -160,6 +161,23 @@ Contributions are warmly welcomed! Help keep this ecosystem guide fresh, accurat
 3. ✏️ **Add or edit entries** following the tabular structure for SaaS or the star-ranked format for open source.
 4. 📝 **Ensure high-quality entries**: Include accurate pricing, official links, and objective descriptions.
 5. 🚀 **Submit a Pull Request** with a brief overview of what you added or updated.
+
+---
+
+## 💖 Support & Sponsorship
+
+A huge **thank you** to everyone exploring, using, and contributing to this curated repository! If this guide helps you navigate event streaming technologies, architecture decisions, or production deployments, please consider supporting the project:
+
+- ⭐ **Star this repository** to help other developers and data engineers discover it.
+- 🍴 **Fork & Share** with your colleagues, teams, and social networks.
+- 📢 **Spread the word** across your community, Twitter/X, LinkedIn, or Discord/Slack groups.
+- ☕ **Buy me a coffee / Sponsor the project**: Support ongoing maintenance, updates, benchmarks, and research via the [GitHub Sponsors Dashboard](https://github.com/sponsors/ishandutta2007).
+
+<p align="center">
+  <a href="https://github.com/sponsors/ishandutta2007">
+    <img src="https://img.shields.io/badge/Sponsor-%E2%9D%A4-ea4aaa?style=for-the-badge&logo=github-sponsors" alt="Sponsor on GitHub" />
+  </a>
+</p>
 
 ---
 
